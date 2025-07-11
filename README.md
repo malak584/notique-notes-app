@@ -56,9 +56,10 @@ The app provides a seamless experience using React for the frontend, Express for
 - Node.js (v16 or higher)
 - MongoDB (locally or cloud-based like MongoDB Atlas)
 
-### 1. Clone the Repository
-
-```bash
+1. Clone the Repository
+bash
+Copier
+Modifier
 git clone https://github.com/your-username/notique.git
 cd notique
 2. Backend Setup (Express)
@@ -89,22 +90,34 @@ npm install
 npm start
 Now open your browser and go to http://localhost:3000 to see the app in action.
 
-API Endpoints
+🔌 API Endpoints
 Here are the available API routes for the backend:
 
-GET /api/notes/get - Retrieve all notes
+GET /api/notes/get – Retrieve all notes
 
-POST /api/notes/create - Create a new note
+POST /api/notes/create – Create a new note
+Request body:
 
-Request body: { "title": "note title", "content": "note content" }
+json
+Copier
+Modifier
+{
+  "title": "note title",
+  "content": "note content"
+}
+PUT /api/notes/update/:id – Update an existing note
+Request body:
 
-PUT /api/notes/update/:id - Update an existing note
+json
+Copier
+Modifier
+{
+  "title": "updated title",
+  "content": "updated content"
+}
+DELETE /api/notes/delete/:id – Delete a note by ID
 
-Request body: { "title": "updated title", "content": "updated content" }
-
-DELETE /api/notes/delete/:id - Delete a note by ID
-
-Usage
+🧠 Usage
 HomePage: Displays all notes fetched from the server.
 
 CreatePage: Allows users to create a new note.
@@ -113,5 +126,5 @@ NoteDetailPage: Used to view and edit an individual note.
 
 Navbar: Includes a link to the Create page.
 
-License
-This project is licensed under the MIT License - see the LICENSE file for details.
+📃 License
+This project is licensed under the MIT License – see the LICENSE file for details.
